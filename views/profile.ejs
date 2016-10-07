@@ -1,0 +1,87 @@
+<% include partials/head %>
+
+<% include partials/navbar %>
+
+<body>
+	<div class="container">
+
+		<div id="url_container" class="row">
+			<div class="col-sm-4">
+				<span><strong>Logged in as</strong>: <%= user.google.name ? user.google.name : '' %></span><br>
+			</div>
+
+			<div class="col-sm-8">
+				<input type="text" id="user_url" placeholder="Add URL Here!" />
+				<button id="addurl">Add URL</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-8">
+
+				<!-- Input URL -->	
+				<div id="get_id" name="url_name" required></div>
+				<br /> 
+
+				<!-- Player -->
+				<div id="video_url"></div>
+				<div id="youtube_id"></div>
+				<div class="video-wrapper">
+					<img id="fox" src="/img/fox_holder.jpg" />
+					<div id="player"></div>
+				</div>
+
+					<div class="col-sm-2">
+						<div id="test">
+						<!-- Comment Box -->
+							<div id="currenttime"></div>
+							<div id="timeHolder"></div>
+						</div>
+					</div>
+
+					<div class="col-sm-10">
+						<div id="test">
+						<!-- Comment Box -->
+							<textarea id="user_comment"></textarea>
+							<button id="add_comment">Add Comment</button>
+						</div>
+					</div>
+			</div>
+
+			<div id="comment_container" class="col-sm-4">
+
+
+				<!-- User Comments -->
+
+				<h5>Comments here:</h5>
+
+				<!-- <button id="make_comment">Make Comment?</button> -->
+
+
+				<!-- <button id="consoletime">nice time console log</button>
+				<br /> 
+				<button id="seekto">Seek To</button> -->
+
+				<!-- actual comments should appear here -->
+				
+				<!-- React stuff  -->
+
+				<div id="comment_area"></div>
+
+			</div>
+		</div>
+
+						
+
+	</div>
+
+	<div>
+	<% include partials/footer %>
+	</div>
+
+	<!-- App Scripts -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
