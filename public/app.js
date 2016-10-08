@@ -91,7 +91,6 @@ $(document).ready(function(){
 										comments.comment + '   ' + 
 										"<a class='jump' data-id='" + comments.timecode + "'>" + 
 										getvideoseconds(comments.timecode) + "</a>" + "</p>"); 
-									); 
 								}
 						});
 				});
